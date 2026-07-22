@@ -7,8 +7,10 @@ async function connectToDatabase() {
 
     await db.sequelize.sync({ alter: true });
     console.log('Database synchronized successfully.');
-    
+
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
 }
+
+module.exports = connectToDatabase;
